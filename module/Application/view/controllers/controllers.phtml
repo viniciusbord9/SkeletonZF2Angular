@@ -1,0 +1,8 @@
+
+<script type="text/javascript">
+	var phonecatApp = angular.module('phonecatApp', []);
+ 
+	phonecatApp.controller('PhoneListCtrl', function ($scope) {
+	  $scope.phones = <?php echo json_encode($this->phones) ?>
+});
+</script>
