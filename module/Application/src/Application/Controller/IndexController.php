@@ -16,16 +16,8 @@ use \ZF2Angular\View\Model\AngularModel;
 
 class IndexController extends AbstractActionController
 {
-
 	public function angularAction(){
-		$variables = array( 
-    		'phones' => array(
-    			array('id'=> '1','name' => 'Nexus S', 'snippet' => 'Fast just got faster with Nexus S.'),
-	        	array('id'=> '2','name' => 'Motorola XOOM™ with Wi-Fi', 'snippet' => 'The Next, Next Generation tablet.'),
-	        	array('id'=> '3','name' => 'MOTOROLA XOOM™', 'snippet' => 'The Next, Next Generation tablet.')
-	        )
-	    );
-	    $angular_model = new AngularModel($variables);
+	    $angular_model = new AngularModel();
 	    $this->layout()->addChild($angular_model, 'controllers');
 	}
 
