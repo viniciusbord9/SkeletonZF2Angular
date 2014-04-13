@@ -3,3 +3,6 @@
 	url = https://github.com/zendframework/zf2.git
 
  
+[submodule "vendor/ZF2Angular"]
+	path = vendor/ZF2Angular
+	url = https://github.com/viniciusbord9/ZF2Angular.git
