@@ -11,26 +11,21 @@ namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
-use Zend\View\Model\JsonModel;
-use \ZF2Angular\View\Model\AngularModel;
 
 class IndexController extends AbstractActionController
 {
 	public function angularAction(){
-	    $angular_model = new AngularModel();
-	    $this->layout()->addChild($angular_model, 'controllers');
+	    return new ViewModel();
 	}
 
     public function indexAction()
     {
     	$view = new ViewModel();
-    	$this->layout()->setTemplate('layout/empty');
     	return $view;
     }
 
     public function editAction(){
     	$view = new ViewModel();
-    	$this->layout()->setTemplate('layout/empty');
     	return $view;
     }
 
@@ -45,7 +40,6 @@ class IndexController extends AbstractActionController
 		        )
 		    );
 	    	$view = new ViewModel($variables);
-	    	$this->layout()->setTemplate('layout/empty');
 	    	return $view;
 	    }else{
 	    	$variables = array( 
@@ -62,7 +56,6 @@ class IndexController extends AbstractActionController
 		    	}
 		    }
 	    	$view = new ViewModel($result);
-	    	$this->layout()->setTemplate('layout/empty');
 	    	return $view;
 	    }
     }

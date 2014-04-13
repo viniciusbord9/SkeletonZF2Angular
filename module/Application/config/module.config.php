@@ -17,6 +17,7 @@ return array(
                     'defaults' => array(
                         'controller' => 'Application\Controller\Index',
                         'action'     => 'angular',
+                        'angular_template' => true,
                     ),
                 ),
             ),
@@ -86,7 +87,7 @@ return array(
         'template_map' => array(
             'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
             'layout/empty'            => __DIR__ . '/../view/layout/empty.phtml',
-            'angular/controllers'     => __DIR__ . '/../view/angular/scripts.phtml',
+            'angular/scripts'         => __DIR__ . '/../view/angular/scripts.phtml',
             'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml',
