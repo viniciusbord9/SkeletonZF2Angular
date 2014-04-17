@@ -6,3 +6,6 @@
 [submodule "vendor/ZF2Angular"]
 	path = vendor/ZF2Angular
 	url = https://github.com/viniciusbord9/ZF2Angular.git
+[submodule "ZF2Angular"]
+	path = ZF2Angular
+	url = https://github.com/viniciusbord9/ZF2Angular.git

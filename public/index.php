@@ -10,6 +10,8 @@ if (php_sapi_name() === 'cli-server' && is_file(__DIR__ . parse_url($_SERVER['RE
     return false;
 }
 
+ini_set("display_errors", true);
+
 // Setup autoloading
 require 'init_autoloader.php';
 

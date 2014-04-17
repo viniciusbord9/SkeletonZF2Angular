@@ -6,6 +6,7 @@
  * @copyright Copyright (c) 2005-2014 Zend Technologies USA Inc. (http://www.zend.com)
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
+namespace Application;
 
 return array(
     'router' => array(
@@ -52,6 +53,20 @@ return array(
                     ),
                 ),
             ),
+            'phones' => array(
+                'type'    => 'Segment',
+                'options' => array(
+                    'route'    => '/phones[/:id]',
+                    'constraints' => array(
+                        'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'id'         => '[0-9]*'
+                    ),
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'Application\Controller',
+                        'controller' => 'Phone',
+                    ),
+                ),
+            ),
         ),
     ),
     'service_manager' => array(
@@ -75,7 +90,8 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Application\Controller\Index' => 'Application\Controller\IndexController'
+            'Application\Controller\Index' => 'Application\Controller\IndexController',
+            'Application\Controller\Phone' => 'Application\Controller\PhoneController',
         ),
     ),
     'view_manager' => array(
@@ -94,6 +110,9 @@ return array(
         ),
         'template_path_stack' => array(
             __DIR__ . '/../view',
+        ),
+        'strategies' => array(
+            'ViewJsonStrategy',
         ),
     ),
     // Placeholder for console routes
