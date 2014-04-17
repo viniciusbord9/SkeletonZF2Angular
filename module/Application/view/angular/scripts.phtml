@@ -5,7 +5,7 @@
 	$template = 'var templateUrlPhoneDetailCtrl = "'.$this->url('application/default', array('controller' => 'index', 'action' => 'edit')).'";';
 	$this->headScript()->appendScript($template,'text/javascript');
 
-	$template = 'var phonesUrl = "'.$this->url('application/default', array('controller' => 'index', 'action' => 'phones')).'";';
+	$template = 'var phonesUrl = "'.$this->url('phones').'";';
 	$this->headScript()->appendScript( $template, 'text/javascript');
 
 	$this->headScript()->appendFile($this->basePath().'/js/application/app.js','text/javascript');
